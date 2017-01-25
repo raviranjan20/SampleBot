@@ -27,7 +27,7 @@ public class BasicLuisDialog : LuisDialog<object>
     public async Task MyIntent(IDialogContext context, LuisResult result)
     {
         var username = context.UserData.Get<string>("name");
-        string message = "Hi " + username + ", Nice to see you";
+        string message = "Hi " + username + ", Nice to see you again";
         await context.PostAsync(message); //
         context.Wait(MessageReceived);
     }
